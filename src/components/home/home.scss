@@ -1,0 +1,99 @@
+@import "../../variables.scss";
+//Main container
+.main {
+  // background-color: rgb(198, 255, 236);
+  width: 100vw;
+  height: 100vh;
+}
+//Header container
+.header {
+  width: 100%;
+  height: auto;
+  // background-color: rgb(208, 160, 253);
+  padding: 20px;
+  display: flex;
+  gap: 3%;
+  align-items: center;
+
+  &__text-yellow {
+    color: $yellow;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 2%;
+  }
+
+  &__text {
+    font-size: 15px;
+    color: $black;
+    background: none;
+    border: none;
+    outline: none;
+  }
+}
+
+//Corousel images
+.carousel-imgs {
+  padding: 8px 0 8px 8px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.carousel-figure {
+  width: 250px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.carousel-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+//Text between carousel
+.text-restaurants {
+  padding: 8px;
+  color: $gray-dark;
+}
+//Carousel divs
+.carousel-divs {
+  // background-color: rgb(255, 171, 16);
+  padding: 8px 0 8px 8px;
+  height: 130px;
+  align-items: center;
+  height: 70px;
+}
+.carousel-div {
+  width: 110px;
+  padding: 10px;
+  background-color: $gray-light;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.carousel-div-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.carousel-div-text {
+  text-align: center;
+  color: $gray-dark;
+  font-size: 13px;
+}
+.buttons-container {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+@media screen and (min-width: 1000px) {
+  .carousel-figure {
+    width: 70%;
+  }
+  .buttons-container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 20% 10px 20%;
+  }
+}

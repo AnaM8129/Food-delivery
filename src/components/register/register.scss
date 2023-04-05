@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+//Big container
+.main-register {
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+
+  &__title {
+    color: $black;
+    margin-top: 15%;
+    margin-bottom: 15%;
+  }
+}
+
+//form-register
+.form-register {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.label-register {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: $gray-dark;
+  font-size: 14px;
+}
+.div-input-register {
+  padding: 10px 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray-dark;
+  margin: 5px;
+}
+.input-register {
+  background: none;
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    font-size: 15px;
+    color: $gray-dark;
+  }
+}
+.submit-register {
+  background-color: $yellow;
+  padding: 15px;
+  color: $gray-dark;
+  border-radius: 8px;
+  border: none;
+}
+//Erros register styles
+.error-message {
+  color: red;
+}
+//Input error
+.input-error {
+  @extend .input-register;
+
+  &::placeholder {
+    color: red;
+    font-size: 15px;
+  }
+}
+
+//Div error
+.div-register-error {
+  padding: 10px 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid red;
+  margin: 5px;
+  font-size: 14px;
+}

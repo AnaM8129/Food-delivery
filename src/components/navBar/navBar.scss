@@ -1,0 +1,29 @@
+@import "../../variables.scss";
+.navbar {
+  padding: 10px 20px 10px 20px;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  text-decoration: none;
+  list-style: none;
+  align-items: center;
+  background-color: white;
+  // background-color: rgb(255, 160, 160);
+}
+
+.navLink {
+  font-size: 25px;
+  color: $black;
+}
+.activeLink {
+  font-size: 25px;
+  color: $yellow;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbar {
+    padding: 10px 20% 10px 20%;
+  }
+}

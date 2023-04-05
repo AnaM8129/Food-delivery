@@ -1,0 +1,275 @@
+//Big container
+.list-container {
+  // background-color: rgb(131, 131, 255);
+  width: 100%;
+  padding: 10px;
+}
+//Each restaurant
+.restaurant-container {
+  // background-color: rgb(141, 141, 255);
+  width: 100%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
+
+  &__figure {
+    width: 130px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 13%, 41% 100%, 18% 100%, 0 100%);
+    margin-right: 4%;
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &__name {
+    font-size: 18px;
+    margin-bottom: 4%;
+  }
+
+  &__time {
+    color: $black;
+    font-size: 15px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+
+  &__price {
+    font-size: 14px;
+    color: $black;
+  }
+  &__span {
+    color: $gray-dark;
+  }
+}
+
+//stars clasification
+.stars-widget {
+  transform: rotateY(180deg);
+  width: 140px;
+  margin-bottom: 4%;
+}
+.input {
+  display: none;
+}
+.label {
+  display: inline-block;
+  color: rgb(201, 201, 201);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.label:not(:last-child) {
+  margin-right: 5px;
+}
+.input:checked ~ .label,
+.input:hover ~ .label {
+  color: $yellow;
+}
+.input:hover ~ .label {
+  transform: scale(1.2) rotate(-30deg);
+}
+
+//Page for each restaurant
+
+.section-each-restaurant {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.image-restaurant {
+  justify-self: center;
+  margin: auto;
+}
+
+.restaurant-container__text {
+  font-size: 13px;
+}
+.container-stars-time {
+  display: flex;
+  gap: 5%;
+  margin-top: 3%;
+  align-items: center;
+}
+.restaurant-time {
+  font-size: 12px;
+  background-color: $gray-light;
+  border-radius: 8px;
+  width: 39%;
+  padding: 2px;
+}
+
+.container-all-dishes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+//Each dish container
+.each-dish-container {
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+.each-dish-img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+  margin-bottom: 5%;
+}
+
+.each-dish-price {
+  color: $gray-dark;
+  margin-top: 5%;
+}
+
+//Dish section (for each dish and select ingredients)
+.dish-section {
+  width: 100vw;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.figure-dish {
+  width: 100%;
+  height: 200px;
+  background-color: red;
+  margin-top: 5%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.img-dish {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.text-dish-container {
+  width: 100%;
+  margin-top: 5%;
+}
+.dish-name {
+  font-size: 18px;
+}
+.dish-time {
+  color: $gray-dark;
+  font-size: 13px;
+}
+.dish-description {
+  color: $black;
+  font-size: 16px;
+}
+.additional-ingredients-container {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+}
+.additional-text {
+  color: $gray-dark;
+  margin-bottom: 1%;
+}
+.check-ingredients-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+//Check-input
+.check-input {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $gray-dark;
+  border-radius: 2px;
+
+  &:checked {
+    border: none;
+    background-color: $yellow;
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+  }
+}
+//footer
+.footer-dish {
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.counter-container {
+  background-color: $gray-light;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+}
+.prices-container {
+  background-color: $yellow;
+  width: 50%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+//button active
+.button-active {
+  @extend .carousel-div;
+  background-color: $yellow;
+}
+.input-counter {
+  //background-color: red;
+  width: 50px;
+  //background: none;
+  border: none;
+  outline: none;
+  color: $black;
+  font-size: 18px;
+  text-align: center;
+  background: none;
+
+  &::placeholder {
+    color: $black;
+    font-size: 18px;
+  }
+}
+.add-button {
+  background-color: $yellow;
+  color: $black;
+  border: none;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1000px) {
+  .list-container {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .restaurant-container {
+    width: 30%;
+    margin: 1%;
+  }
+  .restaurant-container {
+    //background-color: rgb(160, 160, 252);
+    width: 100%;
+  }
+}

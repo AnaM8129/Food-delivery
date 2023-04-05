@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+//big container
+.login-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+  // background-color: rgb(255, 158, 31);
+
+  &__input {
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid $gray-dark;
+    outline: none;
+    color: $gray-dark;
+    font-size: 1rem;
+
+    &::placeholder {
+      font-size: 1rem;
+    }
+  }
+  &__button {
+    background-color: $yellow;
+    width: 100%;
+    color: $gray-dark;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 5%;
+  }
+}
+
+.login-section__title {
+  color: $gray-dark;
+  font-size: 1.5rem;
+  margin-top: 20%;
+  margin-bottom: 20%;
+}

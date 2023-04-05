@@ -1,0 +1,18 @@
+@import "./components/home/home.scss";
+@import "./components/login/login.scss";
+@import "./components/register/register.scss";
+@import "./components/listRestaurants/listRestaurant.scss";
+@import "./components/navBar/navBar.scss";
+@import "./components/search/search.scss";
+@import "./components/orders/orders.scss";
+@import "./components/user/user.scss";
+@import "./components/loading/loading.scss";
+@import "./components/verifyCode/signInCode";
+@import "./components/location/location.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}

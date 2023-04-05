@@ -1,0 +1,29 @@
+.orders-section {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 18px;
+  }
+}
+//Each order
+.each-order {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 1000px) {
+  .each-order {
+    background-color: $gray-light;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1%;
+    border-radius: 8px;
+  }
+}
